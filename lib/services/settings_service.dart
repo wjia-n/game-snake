@@ -64,7 +64,7 @@ class SnakeSettings extends ChangeNotifier {
   int foodStyle = 0;
   String mode = 'classic';
   int difficulty = 1;
-  bool isPro = false;
+  bool isPro = true; // everything unlocked — no Pro version
   int gamesPlayed = 0;
   int applesEaten = 0;
   int reviewCount = 0;
@@ -132,7 +132,7 @@ class SnakeSettings extends ChangeNotifier {
     final m = p.getString(_kMode) ?? 'classic';
     mode = modes.contains(m) ? m : 'classic';
     difficulty = (p.getInt(_kDifficulty) ?? 1).clamp(0, 3);
-    isPro = p.getBool(_kIsPro) ?? false;
+    isPro = true; // everything unlocked
     gamesPlayed = p.getInt(_kGames) ?? 0;
     applesEaten = p.getInt(_kApples) ?? 0;
     reviewCount = p.getInt(_kReviewCount) ?? 0;
