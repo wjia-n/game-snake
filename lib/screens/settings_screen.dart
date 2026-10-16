@@ -5,6 +5,7 @@ import '../services/settings_service.dart';
 import '../theme/garden.dart';
 import '../theme/garden_themes.dart';
 import 'rename_dialog.dart';
+import '../transfer/transfer_ui.dart';
 
 /// Settings: profile, sound, stats, reset.
 class SettingsScreen extends StatefulWidget {
@@ -98,6 +99,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+              TransferSaveTile(gameSlug: 'snake'),
                 const SectionTitle('Player'),
                 SettingRow(
                   theme: t,
