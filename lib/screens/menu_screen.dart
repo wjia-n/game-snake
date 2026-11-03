@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 import '../services/audio_service.dart';
@@ -276,7 +277,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       _IconTile(
                         t: t,
                         icon: Icons.workspace_premium,
-                        label: s.isPro ? 'PRO ✓' : 'PRO',
+                        label: defaultTargetPlatform == TargetPlatform.iOS ? '⭐ Gold Star' : (s.isPro ? 'PRO ✓' : 'PRO'),
                         onTap: _goPro,
                       ),
                       _IconTile(
