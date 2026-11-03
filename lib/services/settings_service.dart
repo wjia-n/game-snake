@@ -54,6 +54,8 @@ class SnakeSettings extends ChangeNotifier {
   static const difficulties = ['Relaxed', 'Classic', 'Speedy', 'Insane'];
   static const difficultyIntervals = [175, 125, 85, 60];
   static const difficultyScores = ['Chill pace', 'True arcade', 'Hot reflexes', 'PRO only'];
+  // iOS variant: same scores without the PRO tag (Android keeps the original).
+  static const difficultyScoresIos = ['Chill pace', 'True arcade', 'Hot reflexes', 'Top reflexes'];
 
   bool musicOn = true;
   bool sfxOn = true;

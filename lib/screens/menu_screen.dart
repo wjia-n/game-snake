@@ -225,7 +225,9 @@ class _MenuScreenState extends State<MenuScreen> {
                         _DifficultyChip(
                           t: t,
                           label: SnakeSettings.difficulties[d],
-                          sub: SnakeSettings.difficultyScores[d],
+                          sub: (defaultTargetPlatform == TargetPlatform.iOS
+                              ? SnakeSettings.difficultyScoresIos
+                              : SnakeSettings.difficultyScores)[d],
                           selected: s.difficulty == d,
                           locked: !s.isPro && d == 3,
                           onTap: () {
